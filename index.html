@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+div {
+	position:relative;
+	left:500px;
+    height: 50px;
+    width:250px;
+    background-color: yellow;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.calcols{
+	  height:50px;
+	  width:50px;
+	  background-color: red;
+	  border: 5px solid black;
+	  position:relative;
+	  left:500px;
+	  border-radius: 10px;
+	  	 }
+</style>
+</head>
+
 <body>
-	<style>table,tr,td{border:solid 2px red;}</style>
-	<div>
-	<div>
-		text input
-	</div>
-	<table>
+
+<div>input text</div>
+
+<table>
 <tr>
-	<td>*</td>
-	<td>/</td>
-	<td>-</td>
-	<td>clr</td>
+	<td class="calcols">*</td>
+	<td class="calcols">/</td>
+	<td class="calcols">-</td>
+	<td class="calcols">clr</td>
 </tr>
 <tr>
-	<td>7</td>
-	<td>8</td>
-	<td>9</td>
-	<td rowspan="2">+</td>
+	<td class="calcols">7</td>
+	<td class="calcols">8</td>
+	<td class="calcols">9</td>
+	<td class="calcols" rowspan="2">+</td>
 </tr>
 <tr>
-	<td>4</td>
-	<td>5</td>
-	<td>6</td>
+	<td class="calcols">4</td>
+	<td class="calcols">5</td>
+	<td class="calcols">6</td>
 </tr>
 <tr>
-	<td>1</td>
-	<td>2</td>
-	<td>3</td>
-	<td rowspan="2">=</td>
+	<td class="calcols">1</td>
+	<td class="calcols">2</td>
+	<td class="calcols">3</td>
+	<td class="calcols" rowspan="2">=</td>
 </tr>
 <tr>
-	<td colspan="2">0</td>
-	<td>.</td>
+	<td class="calcols" colspan="2">0</td>
+	<td class="calcols">.</td>
 </tr>
 	</table>
-</div>
+
 </body>
 </html>
