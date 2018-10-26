@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous">
+  		</script>
+
+  		<script>
+  		$(document).ready(function(){
+
+		$("p:contains(REPLACE_ME)").css("background-color","orange"); /*1*/
+
+		 
+$("div>.special").css("color","red"); /*2*/
+		$("h1,h2,h3,h4,h5,h6").css("color","blue");	/*3*/
+
+		$("li:contains(item 5)").hide();		/*4*/
+		$("li:visible").css("color","blue");
+
+		/*$("td:text").css("background-color","yellow");*/
+		$("td").not(":empty").css("background-color","green");
+
+
+		});
+		</script>
+
+		<style>
+		table,tr,td{border:solid 2px blue;},
+		div{background-color: yellow;
+    		border: 5px solid black;}
+		div{width:250px;
+			background-color: yellow;
+    		border: 1px solid black;}
+		</style>
+
+	</head>
+
+	<body>
+	<h1>
+		<p>This is the text for REPLACE_ME.</p>
+	</h1>
+  	<p>This is the first paragraph.</p>
+  	<p>This is the second paragraph REPLACE_ME.</p>
+
+  	<div>
+  		<div class="special">class special 1</div>
+  		<div>div1</div>
+  		<div>div2</div>
+  	</div>
+
+  	<div>
+  		<div>div3</div>
+  		<div class="special">class special 1</div>
+  		<div>div4</div>
+  	</div>
+
+  	<h1>Heading h1 text.</h1>
+  	<h2>Heading h2 text.</h2>
+  	<h3>Heading h3 text.</h3>
+  	<h4>Heading h4 text.</h4>
+  	<h5>Heading h5 text.</h5>
+  	<h6>Heading h6 text.</h6>
+
+  		<ul>
+  			<li>list item 1</li>
+  			<li>list item 2</li>
+  			<li>list item 3</li>
+  			<li>list item 4</li>
+  			<li>list item 5</li>
+  		</ul>
+
+	<table>
+		<tr>
+			<td></td>
+			<td>table text 1</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>table text 2</td>
+			<td></td>
+			<td>table text 3</td>
+		</tr>
+	</table>
+
+	</body>
+</html>

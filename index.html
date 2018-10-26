@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
 <style>
-div {
-	position:relative;
-	left:500px;
-    height: 50px;
+.calcbody{
+	margin:0 auto;
+	height:410px;
+	width:280px;
+	background-color:#C496E8;
+	border: 5px solid black;
+    border-radius:10px;
+}
+
+.tab{
+	width:260px;
+	margin:10px 10px;
+}
+
+.calc-output
+{	margin:10px 10px;
+	height:50px;
     width:250px;
-    background-color: yellow;
+    background-color:grey;
     border: 5px solid black;
-    border-radius: 10px;
+    border-radius:10px;
+    text-align:right;
 }
 
 .calcols{
-	  height:50px;
-	  width:50px;
-	  background-color: red;
-	  border: 5px solid black;
-	  position:relative;
-	  left:500px;
-	  border-radius: 10px;
+
+	height:50px;
+	width:50px;
+	background-color: #FF8C7F;
+	border: 5px solid black;
+	border-radius:20px;
+	text-align:center;
 	  	 }
 </style>
-</head>
 
 <body>
+<div class="calcbody">
+<div class="calc-output">input text</div>
 
-<div>input text</div>
-
-<table>
+<table class="tab">
 <tr>
 	<td class="calcols">*</td>
 	<td class="calcols">/</td>
@@ -56,7 +72,8 @@ div {
 	<td class="calcols" colspan="2">0</td>
 	<td class="calcols">.</td>
 </tr>
-	</table>
+</table>
+</div>
 
 </body>
 </html>
