@@ -1,0 +1,118 @@
+.todolistadd
+{
+	height:150px;
+	width:600px;
+	margin: 50px auto;
+	background-color:#C8E82D;
+	border-radius: 10px;
+}
+
+.todoinput
+{	
+	position:relative;
+	top:20px;
+	margin:0 auto;
+	width:50%;
+}
+
+
+.listheader
+{
+text-align:center;
+font-style:
+}
+
+
+.myInput
+{
+position:relative;
+top:20px;
+left:40px;
+width:400px;
+height:40px;
+border:5px solid #FF8F31;
+border-radius: 10px;
+text-align: center;
+}
+
+.addBtn
+{
+position:relative;
+top:25px;
+left:50px;
+height:40px;
+width:100px;
+border:5px solid #FF8F31;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold;
+}
+
+.dynamicdivclass
+{
+background-color:#FFD065;
+}
+
+.editbutton
+{
+/*position:absolute;
+left:-85px;
+top:50px;*/
+height:40px;
+width:100px;
+border:5px solid #FF8F31;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold;
+float:right;
+}
+
+.delbutton
+{
+/*position:absolute;
+left:-60px;
+top:50px;*/
+height:40px;
+width:100px;
+border:5px solid #FF8F31;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold;
+float:right;
+}
+
+.divclass
+{
+  margin:10px auto;
+  width:100%;
+  /*height:100px;
+  */
+  padding:7% 0%;
+  background-color:#FFD065;
+  text-align:center;
+  font-style:xx-large;
+  border-width:4px;
+  border-radius:10px;
+}
+
+.enclosing-div
+{
+	margin:0 auto;
+	width:80%;
+}
+.btn-span
+{
+
+	margin-top: 2%;
+    display: inline-block;
+    float: right;
+}
+  /*tododiv.style.margin="10px auto;
+  tododiv.style.width="500px;
+  tododiv.style.height="100px;
+  tododiv.style.backgroundColor="Yellow;
+  tododiv.style.color="Green;
+  tododiv.style.textAlign="left;
+  tododiv.style.fontSize="xx-large;
+  tododiv.style.borderWidth="4px;
+  tododiv.style.borderRadius="10px;*/

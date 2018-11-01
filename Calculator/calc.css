@@ -1,0 +1,55 @@
+.calcbody
+{
+	margin:10% auto;
+	height:410px;
+	width:280px;
+	background-color:#9357E8;
+	border: 5px solid #BF70E8;
+    border-radius:10px;
+    -webkit-box-shadow: -7px -6px 21px 1px rgba(0,0,0,0.7),inset 0px 1px 120px 70px rgba(0,0,0,0.19);
+	-moz-box-shadow: -7px -6px 21px 1px rgba(0,0,0,0.7),inset 0px 1px 120px 70px rgba(0,0,0,0.19);
+	box-shadow: -7px -6px 21px 1px rgba(0,0,0,0.7),inset 0px 1px 120px 70px rgba(0,0,0,0.19);
+
+}
+
+.tab
+{
+	width:260px;
+	height:320px;
+	margin:10px 10px;
+}
+
+.calc-output
+{	margin:10px 10px;
+	height:50px;
+    width:250px;
+    background-color:#BFC7C7;
+    border: 5px solid #BF70E8;
+    border-radius:15px;
+    text-align:right;
+}
+
+
+.calcols:hover
+{
+	background-color:yellow;
+	font-size: 25px;
+	font-weight:bold;
+}
+.calcols
+{
+
+	height:50px;
+	width:50px;
+	margin:10px;
+	background-color: #E6AFFF;
+	border: 3px solid #BF70E8;
+	border-radius:20px;
+	text-align:center;
+	font-weight:bold;
+	-webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75), inset -1px 0px 63px 13px rgba(0,0,0,0.38);
+	-moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75),inset -1px 0px 63px 13px rgba(0,0,0,0.38);
+	box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75),inset -1px 0px 63px 13px rgba(0,0,0,0.38);
+
+}
+}

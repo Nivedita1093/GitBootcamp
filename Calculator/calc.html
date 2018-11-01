@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="calc.css">
+
+<script type="text/javascript" src="calcjquery.js"></script>
+</head>
+
+<body>
+
+<div class="calcbody">
+<div class="calc-output" id="calc-out"></div>
+
+<table class="tab">
+<tr>
+	<td class="calcols" onclick="display('*')">*</td>
+	<td class="calcols" onclick="display('/')">/</td>
+	<td class="calcols" onclick="display('-')">-</td>
+	<td class="calcols" onclick="clearmy()">clr</td>
+</tr>
+<tr>
+	<td class="calcols" onclick="display('7')">7</td>
+	<td class="calcols" onclick="display('8')">8</td>
+	<td class="calcols" onclick="display('9')">9</td>
+	<td class="calcols" rowspan="2" onclick="display('+')">+</td>
+</tr>
+<tr>
+	<td class="calcols" onclick="display('4')">4</td>
+	<td class="calcols" onclick="display('5')">5</td>
+	<td class="calcols" onclick="display('6')">6</td>
+</tr>
+<tr>
+	<td class="calcols" onclick="display('1')">1</td>
+	<td class="calcols" onclick="display('2')">2</td>
+	<td class="calcols" onclick="display('3')">3</td>
+	<td class="calcols" rowspan="2" onclick="mycalc()">=</td>
+</tr>
+<tr>
+	<td class="calcols" colspan="3" onclick="display('0')">0</td>
+	
+</tr>
+</table>
+</div>
+
+</body>
+
+</html>
