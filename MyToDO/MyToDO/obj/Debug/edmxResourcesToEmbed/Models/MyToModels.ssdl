@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TODOAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TaskStatus">
+    <Key>
+      <PropertyRef Name="Task_Status_ID" />
+    </Key>
+    <Property Name="Task_Status_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Task_Status_Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ToDos">
+    <Key>
+      <PropertyRef Name="ToDo_ID" />
+    </Key>
+    <Property Name="ToDo_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ToDo_Description" Type="varchar" MaxLength="50" />
+    <Property Name="ToDo_Status" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Task_Status_ID">
+    <End Role="TaskStatus" Type="Self.TaskStatus" Multiplicity="1" />
+    <End Role="ToDos" Type="Self.ToDos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskStatus">
+        <PropertyRef Name="Task_Status_ID" />
+      </Principal>
+      <Dependent Role="ToDos">
+        <PropertyRef Name="ToDo_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TODOAppModelStoreContainer">
+    <EntitySet Name="TaskStatus" EntityType="Self.TaskStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ToDos" EntityType="Self.ToDos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Task_Status_ID" Association="Self.FK_Task_Status_ID">
+      <End Role="TaskStatus" EntitySet="TaskStatus" />
+      <End Role="ToDos" EntitySet="ToDos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

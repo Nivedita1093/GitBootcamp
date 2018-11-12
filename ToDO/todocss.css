@@ -78,6 +78,15 @@ display: inline-block;
 float: right;
 }
 
+.statusbutton
+{
+height:40px;
+width:100px;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold;
+float:right;
+}
 
 .editbutton
 {
