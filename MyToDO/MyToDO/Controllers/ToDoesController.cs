@@ -16,7 +16,7 @@ namespace MyToDO.Controllers
     [RoutePrefix("api/mytodolist")]
     public class ToDoesController : ApiController
     {
-        private TODOAppEntities db = new TODOAppEntities();
+        private TODOAppEntitities db = new TODOAppEntitities();
         [Route("get")]
         // GET: api/ToDoes
         [HttpGet]

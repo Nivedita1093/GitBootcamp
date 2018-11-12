@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TODOAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TaskStatu">
+    <Key>
+      <PropertyRef Name="Task_Status_ID" />
+    </Key>
+    <Property Name="Task_Status_ID" Type="Int32" Nullable="false" />
+    <Property Name="Task_Status_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ToDos" Relationship="Self.FK_Task_Status" FromRole="TaskStatus" ToRole="ToDos" />
+  </EntityType>
+  <EntityType Name="ToDo">
+    <Key>
+      <PropertyRef Name="ToDo_ID" />
+    </Key>
+    <Property Name="ToDo_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ToDo_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ToDo_Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="TaskStatu" Relationship="Self.FK_Task_Status" FromRole="ToDos" ToRole="TaskStatus" />
+  </EntityType>
+  <Association Name="FK_Task_Status">
+    <End Role="TaskStatus" Type="Self.TaskStatu" Multiplicity="1" />
+    <End Role="ToDos" Type="Self.ToDo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskStatus">
+        <PropertyRef Name="Task_Status_ID" />
+      </Principal>
+      <Dependent Role="ToDos">
+        <PropertyRef Name="ToDo_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TaskStatus" EntityType="Self.TaskStatu" />
+    <EntitySet Name="ToDos" EntityType="Self.ToDo" />
+    <AssociationSet Name="FK_Task_Status" Association="Self.FK_Task_Status">
+      <End Role="TaskStatus" EntitySet="TaskStatus" />
+      <End Role="ToDos" EntitySet="ToDos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

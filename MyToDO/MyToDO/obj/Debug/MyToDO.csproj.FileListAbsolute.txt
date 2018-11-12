@@ -22,3 +22,7 @@ C:\Users\nivedita.wasson\source\repos\MyToDO\MyToDO\obj\Debug\MyToDO.pdb
 C:\Users\nivedita.wasson\source\repos\MyToDO\MyToDO\bin\System.Web.Cors.dll
 C:\Users\nivedita.wasson\source\repos\MyToDO\MyToDO\bin\System.Web.Http.Cors.dll
 C:\Users\nivedita.wasson\source\repos\MyToDO\MyToDO\bin\System.Web.Http.Cors.xml
+C:\GitBootcamp\MyToDO\MyToDO\obj\Debug\MyToDO.csprojResolveAssemblyReference.cache
+C:\GitBootcamp\MyToDO\MyToDO\obj\Debug\MyToDO.csproj.CoreCompileInputs.cache
+C:\GitBootcamp\MyToDO\MyToDO\obj\Debug\MyToDO.dll
+C:\GitBootcamp\MyToDO\MyToDO\obj\Debug\MyToDO.pdb

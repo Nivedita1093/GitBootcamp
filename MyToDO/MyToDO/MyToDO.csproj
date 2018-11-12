@@ -96,15 +96,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Models\MyToModels.Context.tt">
+    <Content Include="Models\TODOAppModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MyToModels.edmx</DependentUpon>
-      <LastGenOutput>MyToModels.Context.cs</LastGenOutput>
+      <DependentUpon>TODOAppModel.edmx</DependentUpon>
+      <LastGenOutput>TODOAppModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\MyToModels.tt">
+    <Content Include="Models\TODOAppModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MyToModels.edmx</DependentUpon>
-      <LastGenOutput>MyToModels.cs</LastGenOutput>
+      <DependentUpon>TODOAppModel.edmx</DependentUpon>
+      <LastGenOutput>TODOAppModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -117,36 +117,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\MyToModels.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyToModels.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MyToModels.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyToModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MyToModels.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyToModels.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\TaskStatu.cs">
-      <DependentUpon>MyToModels.tt</DependentUpon>
+      <DependentUpon>TODOAppModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ToDo.cs">
-      <DependentUpon>MyToModels.tt</DependentUpon>
+      <DependentUpon>TODOAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TODOAppModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TODOAppModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TODOAppModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TODOAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TODOAppModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TODOAppModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\MyToModels.edmx">
+    <EntityDeploy Include="Models\TODOAppModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MyToModels.Designer.cs</LastGenOutput>
+      <LastGenOutput>TODOAppModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\MyToModels.edmx.diagram">
-      <DependentUpon>MyToModels.edmx</DependentUpon>
+    <Content Include="Models\TODOAppModel.edmx.diagram">
+      <DependentUpon>TODOAppModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
