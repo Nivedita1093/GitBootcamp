@@ -25,7 +25,7 @@ $.ajax({
             cell1.innerHTML=response[i].name;
             cell2.innerHTML=response[i].age;
             cell3.innerHTML=response[i].registrationNumber;
-            cell4.innerHTML='<button class="btn btn-primary" id='+row.id+'>Edit</button>'+'<button class="btn btn-primary" id='+row.id+'>Delete</button>';
+            cell4.innerHTML='<button class="btn btn-primary" id='+row.id+' onclick="editElement('+i+')">Edit</button>'+'<button class="btn btn-primary" id='+row.id+' onclick="delElement('+i+')">Delete</button>';
             }
         }
     });
@@ -34,6 +34,9 @@ $.ajax({
 
 
 function register () {
+    console.log("flagrecevd="+flag);
+    if(flag==0)
+    {
 	var std_name=document.getElementById("inputStdname").value;
 	var age=document.getElementById("age").value;
 	var reg_no=document.getElementById("registration_number").value;
@@ -43,11 +46,121 @@ function register () {
     	async:true, 
     	dataType:"json",
     	data:{"name":std_name,"age":age,"registrationNumber":reg_no},
-    	crossDomain:true,
+    	crossDomain:true,  
     	success: function(response) {
     		console.log(response);
     	}
 	});
+    }
+
+    else
+    {
+    var std_name=document.getElementById("inputStdname").value;
+    var age=document.getElementById("age").value;
+    var reg_no=document.getElementById("registration_number").value;
+    $.ajax({
+        type: "PUT",
+        url: 'http://localhost:8083/update/student/'+my_editid,
+        async:true, 
+        dataType:"json",
+        data:{"name":std_name,"age":age,"registrationNumber":reg_no},
+        crossDomain:true,
+        success: function(response) {
+            alert("in edit register");
+            console.log(response);
+        }
+    });
+    }
+    flag=0;
 }
 
 
+
+function delElement(arr_id)
+ {
+
+        $.ajax({
+          type: "DELETE",
+          url: 'http://localhost:8083/delete/student/'+arr_id,
+          async:true, 
+          dataType:"json",
+          crossDomain:true,
+          success: function(response) 
+          {
+            alert("Your content has been deleted");
+            location.reload();
+          }
+        });
+ }
+
+
+
+var flag=0;
+/*var stdname;
+var stdage;
+var regno;*/
+function editElement(arr_id)
+ {
+        //console.log("flagset="+flag);
+       //localStorage.setItem("lcl_st",flag);
+        $.ajax({
+        type: "GET",
+        url: 'http://localhost:8083/student/allstudent/'+arr_id,
+        async:true, 
+        dataType:"json",
+        crossDomain:true,
+        success: function(response) {
+            localStorage.setItem("stdn",response.name);
+            localStorage.setItem("stda",response.age);
+            localStorage.setItem("stdreg",response.registrationNumber);
+
+            localStorage.setItem("my_arrid",arr_id);
+           // localStorage.setItem("my_flag",flag);
+        }
+    });
+    
+    
+    window.location.href="index.html";
+   // flag=1;
+    //console.log("flagset="+flag);
+
+}
+
+var my_editid;
+function getlocalstg()
+{
+//console.log(localStorage.getItem('stdn'));
+var rsname=localStorage.getItem('stdn');
+;
+my_editid=localStorage.getItem('my_arrid')
+if (rsname){
+document.getElementById("inputStdname").value=localStorage.getItem('stdn');
+document.getElementById("age").value=localStorage.getItem('stda');
+document.getElementById("registration_number").value=localStorage.getItem('stdreg');
+flag=1;
+console.log("flagset="+flag);
+localStorage.clear();
+}
+
+//console.log("flagset="+flag);
+}
+
+
+
+
+/*function editElement(arr_id)
+ {
+
+        $.ajax({
+          type: "PUT",
+          url: 'http://localhost:8083/update/student'+arr_id,
+          async:true, 
+          dataType:"json",
+          crossDomain:true,
+          success: function(response) 
+          {
+            alert("Your content has been edited");
+            location.reload();
+          }
+        });
+ }*/

@@ -83,7 +83,7 @@ try
     m.put("age", student.getAge());
     m.put("registrationNumber", student.getRegistrationNumber());
     obj.add(m);
-	//fw.write(json);
+	
     
 	fw.write(obj.toJSONString());
 	fw.close();  	

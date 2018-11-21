@@ -12,6 +12,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -31,14 +32,6 @@ public class StudentRetrieveController {
 	  	{
 		 FileReader rt=new FileReader("C:/java-json/StudentData.json");
 		 object = (JSONArray)parser.parse(rt);
-	
-		/*JSONObject jsonObject = (JSONObject)object;
-		String a=(String)jsonObject.get("name");
-		String b=(String)jsonObject.get("age");
-		String c=(String)jsonObject.get("registrationNumber");
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(c);*/
 		   
 		
 		} 
@@ -47,9 +40,44 @@ public class StudentRetrieveController {
 	    e.printStackTrace();
 	    object= new JSONArray();
 		}
-
+	  return object;
+	  
 //  return StudentRegistration.getInstance().getStudentRecords();
-  return object;
+  
   }
   
-}
+
+  
+  
+  
+  
+  @CrossOrigin(origins = "http://localhost:8080")
+  @RequestMapping(method = RequestMethod.GET, value="/student/allstudent/{id}")
+  @ResponseBody
+  public Object getOneStudent(@PathVariable("id") String id) {
+	JSONArray object;
+	Object std;
+	JSONParser parser = new JSONParser();
+	  try
+	  	{
+		 FileReader rt=new FileReader("C:/java-json/StudentData.json");
+		 object = (JSONArray)parser.parse(rt);
+		 std=(Object) object.get(Integer.parseInt(id));
+		
+		} 
+	catch (Exception e) 
+		{
+	    e.printStackTrace();
+	    object= new JSONArray();
+	    std=new Object();
+		}
+	return std;
+	  
+//  return StudentRegistration.getInstance().getStudentRecords();
+  
+  }
+  
+
+
+
+} 
