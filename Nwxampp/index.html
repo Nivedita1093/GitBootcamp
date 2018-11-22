@@ -7,27 +7,35 @@
 	</head>
 
 	<body class="bodyclass">
-		<div class="enclosing-div">
-
-		<select id="mydropdown">
-  		<option value="dropdown" >None</option>
+		<!-- <div class="enclosing-div"> -->
+		<div class="drop-div1">
+		<select id="mydropdown" class="mydropdown" onchange="tasks()">
+  		<option value="dropdown">None</option>
 		</select>
+		</div>
   
 
 				<div id="listadd" class="todolistadd">
 		  			<div class=todoinput>
 		  				<h1 class="listheader">TO DO LIST</h1>
 		  			</div>
+		  			
 		  			<div class="thisdiv">
 			  			<input class="myInput" type="text" id="myInput" placeholder="ADD  NEW">
 			  			<button onclick="newElement()" class="addBtn" id="addBtn">+</button>
 		  			</div>
 		  		</div>
+		  		<div class="drop-div2">
+		  		<select id="select_dropdown" class="select_dropdown" onchange="sel_drp()">
+  				<option value="select_dropdown">None</option>
+  				</select>
+  				</div>
 
-		  		<!-- <div id="idofdiv"></div> -->
 
 				<div id="parentdiv"></div>
-		</div>
+
+				<!-- <div id="tsk"></div> -->
+		<!-- </div> -->
 
 	</body>
 </html>

@@ -9,26 +9,49 @@ height: 100%;
 .bodyclass
 {
 background:url("myimg.jpg");
-height: 100%; 
+height: 100%;
 background-position: center;
 background-repeat: no-repeat;
 background-size:cover;
 }
 
-.enclosing-div
+/* .enclosing-div
 {
   margin:0 auto;
   width:80%;
 }
+ */
+ .drop-div1
+ {
+ width:10%;
+ }
 
+ .mydropdown
+ {
+ background-color:#0200ff42;
+ width:100%;
+ height:50%;
+ }
+
+.drop-div2
+ {
+ width:10%;
+ }
+
+.select_dropdown
+{
+ background-color:#0200ff42;
+ width:100%;
+ height:50%;	
+}
 
 .todolistadd
 {
-	height:150px;
-	width:50%;
-	margin: 50px auto;
+	height:20%;
+	width:60%;
+	margin:0 auto;
 	background-color:#da5cd745;
-	border-radius: 10px;
+	border-radius:50px;
 }
 
 .todoinput
@@ -36,8 +59,9 @@ background-size:cover;
 	position:relative;
 	top:20px;
 	margin:0 auto;
-	width:50%;
+	width:40%;
 }
+
 .thisdiv
 {
   width:100%;
@@ -48,14 +72,11 @@ background-size:cover;
 text-align:center;
 }
 
-
 .myInput
 {
-position:relative;
-top:20px;
-left:40px;
+height:30px;
 width:70%;
-height:40px;
+margin-left:5%;
 border:5px solid #ff8f31b3;
 border-radius: 10px;
 text-align: center;
@@ -63,11 +84,9 @@ text-align: center;
 
 .addBtn
 {
-position:relative;
-top:25px;
-left:50px;
 height:40px;
 width:15%;
+margin-left:5%;
 border-radius: 10px;
 font-size: 25px;
 font-weight: bold;
@@ -83,7 +102,7 @@ float: right;
 
 .statusbutton
 {
-height:40px;
+height:30%;
 width:100px;
 border-radius: 10px;
 font-size: 25px;
@@ -93,7 +112,7 @@ float:right;
 
 .editbutton
 {
-height:40px;
+height:30%;
 width:100px;
 border-radius: 10px;
 font-size: 25px;
@@ -103,7 +122,7 @@ float:right;
 
 .delbutton
 {
-height:40px;
+height:30%;
 width:100px;
 border-radius: 10px;
 font-size: 25px;
@@ -114,12 +133,11 @@ float:right;
 .divclass
 {
 margin:10px auto;
-width:80%;
-height:10%;
-padding:7% 0%;
+width:60%;
+padding:5% 0%;
 background-color:#ffd06582;
 text-align:center;
 font-style:xx-large;
-border-width:4px;
-border-radius:10px;
+border-width:5px;
+border-radius:50px;
 }
